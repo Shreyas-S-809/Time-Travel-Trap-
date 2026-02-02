@@ -1,3 +1,6 @@
+# Time-Travel-Trap
+How I Built a 99% Accurate Model That Was Completely Useless — and Replaced It with a Production-Ready System
+
 <p align="center"> <img src="https://img.shields.io/badge/Machine%20Learning-Production%20Ready-brightgreen"/> <img src="https://img.shields.io/badge/Focus-Data%20Leakage-red"/> <img src="https://img.shields.io/badge/Model-XGBoost-blue"/> <img src="https://img.shields.io/badge/Deployment-Streamlit-orange"/> </p> <p align="center"> <b>⚠️ High Accuracy ≠ Correct Model</b><br> This project demonstrates why. </p>
 
 
@@ -118,7 +121,7 @@ This allows the model to learn from the future.
 
 Instead of forcing the score to drop artificially, this project proves a deeper truth:
 Once leakage exists, evaluation itself becomes meaningless.
-We cannot “fix” a leaky model — you must throw it away.
+We cannot "fix" a leaky model — you must throw it away.
 
 🛠️ Phase 3 — The  Fix (Robust Pipeline)
 ✅ Production Rules Enforced
