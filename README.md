@@ -31,9 +31,9 @@ Why evaluation can lie
 How to design production-safe ML pipelines
 How to deploy ML systems, not just notebooks
 
+## 🏗️ Architecture Overview
 
-🏗️ Architecture Overview
-
+```text
 Raw Sales Data
       ↓
 [ LEAKY PIPELINE ]
@@ -54,9 +54,9 @@ TimeSeriesSplit CV
       ↓
 🚀 Streamlit Deployment
 
+## 🏗️ Repository Structure
 
-
-🏗️ Repository Structure
+```text
 project-6-time-travel-trap/
 │
 ├── data/
@@ -74,7 +74,6 @@ project-6-time-travel-trap/
 ├── app.py
 ├── requirements.txt
 └── README.md
-
 
 📊 Dataset Description
 Source: Walmart Store Sales (Time-Series Retail Data)
