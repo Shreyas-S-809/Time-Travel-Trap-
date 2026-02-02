@@ -6,7 +6,7 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Data
-data/raw/*.csv
+
 data/processed/*
 
 # Artifacts (optional: keep if small)
