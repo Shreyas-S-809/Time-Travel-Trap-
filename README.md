@@ -9,6 +9,8 @@
   <img src="https://img.shields.io/badge/Deployment-Streamlit-orange"/>
 </p>
 
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 <p align="center">
   <b>⚠️ High Accuracy ≠ Correct Model</b><br>
   This project demonstrates why.
@@ -250,10 +252,11 @@ The app never recomputes historical features — it consumes trusted context, ju
 
 ---
 
+Running the project : 
+
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-**Thank You! 🙌**
