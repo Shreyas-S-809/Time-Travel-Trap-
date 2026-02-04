@@ -233,7 +233,7 @@ The app never recomputes historical features — it consumes trusted context, ju
 
 ## Deployment Notes
 
-**🌐 Live Demo:** [Sales Forecaster on Streamlit](https://sales-forecaster.streamlit.app)
+**🌐 Live Demo:** [Sales Forecaster on Streamlit](https://time-travel-trap.streamlit.app)
 
 This project is deployed as a production-safe forecasting system, not just a trained model.
 
