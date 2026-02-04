@@ -9,8 +9,6 @@
   <img src="https://img.shields.io/badge/Deployment-Streamlit-orange"/>
 </p>
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-
 <p align="center">
   <b>⚠️ High Accuracy ≠ Correct Model</b><br>
   This project demonstrates why.
@@ -18,7 +16,7 @@
 
 ---
 
-## ⚙️ Why This Project Exists
+## Why This Project Exists
 
 Most machine learning models fail in production, not because the algorithm is weak — but because the data pipeline is wrong.
 
@@ -76,7 +74,7 @@ TimeSeriesSplit CV
 ## 📁 Repository Structure
 
 ```
-time-travel-trap/
+project-6-time-travel-trap/
 │
 ├── data/
 │   └── raw/
@@ -99,9 +97,7 @@ time-travel-trap/
 
 ## 📊 Dataset Description
 
-**Source:** Walmart Store Sales (Time-Series Retail Data) 
-**Link 👉**
-[Click Here](https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting/data)
+**Source:** Walmart Store Sales (Time-Series Retail Data)
 
 | Column      | Description        |
 |-------------|-------------------|
@@ -199,7 +195,7 @@ TimeSeriesSplit(n_splits=5)
 | 4    | ~0.85 |
 | 5    | ~0.93 |
 
-**Interpretation:** Performance improves as more historical context becomes available — exactly what a real forecasting system should show.
+**Interpretation:** Performance improves as more historical context becomes available.
 
 ---
 
@@ -235,7 +231,21 @@ The app never recomputes historical features — it consumes trusted context, ju
 
 ---
 
-## 📌 Project Status
+## Deployment Notes
+
+**🌐 Live Demo:** [Sales Forecaster on Streamlit](https://sales-forecaster.streamlit.app)
+
+This project is deployed as a production-safe forecasting system, not just a trained model.
+
+* The trained model (`xgboost_model.pkl`) and historical feature store (`item_stats.csv`) are saved separately to ensure training–serving consistency.
+* At inference time, the application recreates only leakage-safe features (lagged trends, rolling statistics, and calendar features).
+* No future data or global statistics are accessed during prediction.
+* The Streamlit app serves as a scenario planner, allowing controlled "what-if" adjustments without retraining the model.
+* Live USD → INR conversion is fetched safely and cached, with graceful fallback on failure.
+
+---
+
+## Project Status
 
 ✅ End-to-End Complete  
 ✅ Leakage-Safe  
@@ -252,11 +262,10 @@ The app never recomputes historical features — it consumes trusted context, ju
 
 ---
 
-Running the project : 
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
+**Thank You!**
