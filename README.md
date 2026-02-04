@@ -7,11 +7,12 @@
   <img src="https://img.shields.io/badge/Focus-Data%20Leakage-red"/>
   <img src="https://img.shields.io/badge/Model-XGBoost-blue"/>
   <img src="https://img.shields.io/badge/Deployment-Streamlit-orange"/>
+  <a href="https://time-travel-trap.streamlit.app/"><img src="https://img.shields.io/badge/Live%20Demo-Streamlit-red"/></a>
 </p>
 
 <p align="center">
   <b>⚠️ High Accuracy ≠ Correct Model</b><br>
-  This project demonstrates why.
+  
 </p>
 
 ---
@@ -98,6 +99,9 @@ project-6-time-travel-trap/
 ## 📊 Dataset Description
 
 **Source:** Walmart Store Sales (Time-Series Retail Data)
+
+**Link 👉**
+[Click Here](https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting/data)
 
 | Column      | Description        |
 |-------------|-------------------|
@@ -242,6 +246,39 @@ This project is deployed as a production-safe forecasting system, not just a tra
 * No future data or global statistics are accessed during prediction.
 * The Streamlit app serves as a scenario planner, allowing controlled "what-if" adjustments without retraining the model.
 * Live USD → INR conversion is fetched safely and cached, with graceful fallback on failure.
+
+---
+
+
+## ▶️ Running the App Locally
+
+
+1. **Clone the repository**
+   ```bash
+   git clone [LINK](https://github.com/Shreyas-S-809/Time-Travel-Trap-)
+   cd Time-Travel-Trap
+   ```
+
+2. **Initialize and Activate Virtual Environment**
+   ```powershell
+   # Create environment
+   python -m venv en
+
+   # Activate (Windows)
+   en\Scripts\activate
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application**
+   ```bash
+   streamlit run app.py
+   ```
+
+All heavy ML computation is already done — the app loads instantly.
 
 ---
 
