@@ -26,9 +26,9 @@ This project demonstrates one of the most dangerous and common ML failures: **Da
 Instead of avoiding this mistake:
 
 ✅ I intentionally created a leaky model  
-💥 Proved why its accuracy was an illusion  
-🛠️ Rebuilt a leakage-safe pipeline  
-🚀 Deployed a real forecasting system
+ Proved why its accuracy was an illusion  
+ Rebuilt a leakage-safe pipeline  
+ Deployed a real forecasting system
 
 ---
 
@@ -41,9 +41,6 @@ Build a sales forecasting system that exposes one of the most dangerous ML failu
 1. Why random splits break time-series
 2. Why future data contaminates models
 3. Why evaluation can lie
-4. How to design production-safe ML pipelines
-5. How to deploy ML systems, not just notebooks
-
 ---
 
 ## 🏗️ Architecture Overview
@@ -65,9 +62,9 @@ Lag + Rolling + Calendar
       ↓
 TimeSeriesSplit CV
       ↓
-✅ Honest Performance
+  Honest Performance
       ↓
-🚀 Streamlit Deployment
+  Streamlit Deployment
 ```
 
 ---
@@ -158,26 +155,25 @@ We cannot "fix" a leaky model — you must throw it away.
 
 ## 🛠️ Phase 3 — The Fix (Robust Pipeline)
 
-### ✅ Production Rules Enforced
+### Given The Constraints
 
-✔ No future data  
-✔ No global statistics  
-✔ No random splits  
-✔ Past → Present → Future only
+ No future data  
+ No global statistics  
+ No random splits  
+ Past → Present → Future only
 
 ### 🧱 Leakage-Safe Feature Engineering
 
-| Feature            | Description                   | Safe |
-|--------------------|-------------------------------|------|
-| `Sales_Lag_7`      | Sales from last week          | ✅   |
-| `Sales_Rolling_30` | 30-day rolling mean (shifted) | ✅   |
-| `DayOfWeek`        | Calendar feature              | ✅   |
-| `Month`            | Seasonality                   | ✅   |
-| `IsWeekend`        | Weekend indicator             | ✅   |
+| Feature            | Description                   |
+|--------------------|-------------------------------|
+| `Sales_Lag_7`      | Sales from last week          | 
+| `Sales_Rolling_30` | 30-day rolling mean (shifted) |
+| `DayOfWeek`        | Calendar feature              |
+| `Month`            | Seasonality                   | 
+| `IsWeekend`        | Weekend indicator             |
 
-All rolling features are explicitly shifted to prevent future leakage.
 
-### ⏱️ Validation Strategy
+###  Validation Strategy
 
 ```python
 TimeSeriesSplit(n_splits=5)
@@ -189,7 +185,7 @@ TimeSeriesSplit(n_splits=5)
 - Simulates real deployment
 - Prevents silent leakage
 
-### 📊 Honest Performance (Cross-Validation)
+###  Honest Performance (Cross-Validation)
 
 | Fold | R²    |
 |------|-------|
@@ -209,7 +205,7 @@ TimeSeriesSplit(n_splits=5)
 
 The final model is deployed as a **Scenario Planner**, not just a predictor.
 
-### 🔮 App Capabilities
+###  App Capabilities
 
 - Separate Store ID and Item ID selection
 - Forecast future dates
@@ -231,7 +227,7 @@ This avoids one of the most common ML failures: **training–serving feature mis
 - `xgboost_model.pkl` → trained model
 - `item_stats.csv` → last known rolling statistics
 
-The app never recomputes historical features — it consumes trusted context, just like a real system.
+The app never recomputes historical features — it consumes trusted context.
 
 ---
 
