@@ -1,0 +1,23 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+env.bak/
+venv.bak/
+
+# Jupyter Notebooks and Checkpoints
+.ipynb_checkpoints
+notebooks/
+
+# Ignore large raw data sets
+data/raw/
+
+# Streamlit specific
+.streamlit/
