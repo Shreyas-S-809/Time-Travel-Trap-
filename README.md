@@ -41,6 +41,9 @@ Build a sales forecasting system that exposes one of the most dangerous ML failu
 1. Why random splits break time-series
 2. Why future data contaminates models
 3. Why evaluation can lie
+
+****This project is fully containerized, please refer to the Docker commands below.****
+
 ---
 
 ## 🏗️ Architecture Overview
@@ -273,6 +276,25 @@ This project is deployed as a production-safe forecasting system, not just a tra
    ```bash
    streamlit run app.py
    ```
+
+
+5. **OR Run it using Docker**
+
+First, pull the latest image:
+
+   ```bash
+   docker pull shreyas809/time-travel-trap:latest
+   ```
+Next, Start the container. Make sure to map the ports correctly to `8051`
+
+  ```bash
+  docker run -p 8501:8501 shreyas809/time-travel-trap:latest
+  ```
+Once the container is running, open your web browser and navigate to:
+  http://localhost:8501
+
+> _(Note: The terminal might output a link to `0.0.0.0.:8501`. If you are windows, Browsers cannot route to `0.0.0.0`, so always use `localhost` instead!)._
+---
 
 All heavy ML computation is already done — the app loads instantly.
 
