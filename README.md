@@ -285,7 +285,7 @@ First, pull the latest image:
    ```bash
    docker pull shreyas809/time-travel-trap:latest
    ```
-Next, Start the container. Make sure to map the ports correctly to `8051`
+Next, Start the container. Make sure to map the ports correctly to `8501`
 
   ```bash
   docker run -p 8501:8501 shreyas809/time-travel-trap:latest
@@ -297,14 +297,6 @@ Once the container is running, open your web browser and navigate to:
 ---
 
 All heavy ML computation is already done — the app loads instantly.
-
----
-
-## Project Status
-
-✅ End-to-End Complete  
-✅ Leakage-Safe  
-✅ Production-Ready
 
 ---
 
